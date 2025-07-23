@@ -189,11 +189,46 @@ Data cleaning is crucial to ensure the dataset is accurate, reliable, and analys
 ![Rename and delete column](Asset/Image/cleaning.jpg)
   
 - **Remove unnecessary data**:
-  - Drop rows where `FeatureName` includes "Scotland" as they represent national aggregates.
+  
+  - Drop rows where `Council` includes "Scotland" as they represent national aggregates.
+
+![Filter out Scotland from Council](Asset/Image/Filter Scotland.png)
+
   - Exclude generic entries such as "All" from both `Energy Type` and `Energy Consuming Sector`.
+
+![All Energy Type](Asset/Image/All energy Type.png)
+    
   - Remove "Industrial & Commercial" as a combined category to avoid duplication, since the sectors also exist as stand-alone entries.
+
+![all and industrial&commercial](Asset/Image/all and industrial&commercial .png)
+    
   - To facilitate time-series analysis and visualization, we need to convert the `Year` column into a proper `Date` format. Since the original dataset only includes the year (e.g., `2010`, `2011`), we will create a new column called `Date` by assuming that data was      collected on the **1st of January** of each year.
 
+```excel
+=IF(COUNTA(A2:I19009)<ROWS(A2:I19009)*COLUMNS(A2:I19009), "Has Blanks", "No Blanks")
+```
+
+<div style="display: flex; gap: 20px; flex-wrap: wrap; justify-content: center;">
+
+  <div style="flex: 1 1 300px; text-align: center;">
+    <img src="Asset/Image/date column.jpg" 
+         alt="Date column Formula" 
+         style="width: 100%; max-width: 300px; transition: transform 0.3s ease; cursor: zoom-in;" 
+         onmouseover="this.style.transform='scale(1.8)'" 
+         onmouseout="this.style.transform='scale(1)'">
+    <p><strong>Step 1:</strong> Date Column Formula</p>
+  </div>
+
+  <div style="flex: 1 1 300px; text-align: center;">
+    <img src="Asset/Image/date column 2.jpg" 
+         alt="Resulting Date Column" 
+         style="width: 100%; max-width: 300px; transition: transform 0.3s ease; cursor: zoom-in;" 
+         onmouseover="this.style.transform='scale(1.8)'" 
+         onmouseout="this.style.transform='scale(1)'">
+    <p><strong>Step 2:</strong> Resulting Date Column</p>
+  </div>
+
+</div>
 
 ### ➤ 3. Exploratory Data Analysis (EDA)
 Perform an initial examination of the dataset to understand:
