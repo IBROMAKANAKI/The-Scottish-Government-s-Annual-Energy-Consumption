@@ -1,5 +1,10 @@
 # Energy Consumption in Scottish Council Areas (2005–2020)
 
+<p align="right">
+  <img src="Student Course Registration System Report/Asset/Image/Datakirk logo.jpg" alt="Datakirk logo" width="150">
+</p>
+<h1 align="center">SALAWUDEEN IBRAHIM</h1>
+
 ## Introduction
 
 The Scottish Government publishes annual energy consumption data for all 32 council areas in Scotland. This dataset spans the years 2005 to 2020 and includes various energy types—such as electricity, gas, coal, and petroleum products—across multiple consumption sectors including domestic, transport, public sector, and industrial & commercial use.
