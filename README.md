@@ -76,6 +76,94 @@ Additional supporting references may include:
 - Local authority climate action reports
 - National Records of Scotland (for population and household context)
 
+## Methodology
+
+The following structured methodology was adopted to carry out this energy consumption analysis project. Each step builds upon the previous one to ensure a clean, insightful, and actionable outcome.
+
+📂 Energy Data Analysis Project
+├── 📁 1. Convert CSV to Excel Format
+│
+├── 📁 2. Data Cleaning and Preprocessing
+│ ├── 🔍 Check for null or missing values
+│ ├── ✏️ Rename columns
+│ └── 🧹 Remove:
+│ ├── "Scotland" from FeatureName
+│ ├── "All" from Energy Type and Sector
+│ └── "Industrial & Commercial" combined category
+│
+├── 📁 3. Exploratory Data Analysis (EDA)
+│ ├── 📈 Understand sector and energy trends
+│ └── 🧐 Detect anomalies and data patterns
+│
+├── 📁 4. Visual Analysis and Graphical Insights
+│ ├── 📊 Line and bar charts
+│ ├── 🌡️ Heatmaps
+│ └── 🗺️ Geographic comparisons (council areas)
+│
+├── 📁 5. Predictive Modeling with Linear Regression
+│ ├── 🔢 Train regression model
+│ ├── 📉 Test and validate predictions
+│ └── 🔮 Forecast next 5 years of energy use
+│
+├── 📁 6. Dashboard Development
+│ ├── 💻 Create interactive views
+│ ├── 🎛️ Add filters by region, sector, and fuel type
+│ └── 📤 Share insights with stakeholders
+│
+└── 📁 7. Key Findings and Conclusion
+├── ✅ Summarize insights and trends
+├── 📌 Highlight areas for improvement
+└── 📍 Align with Scotland’s climate goals
+
+### ➤ 1. Convert CSV to Excel Format
+The original dataset, provided in CSV format, is first converted to Excel format (`.xlsx`) for easier manipulation, documentation, and integration with visualization tools like Excel, Power BI, or Python (via pandas and openpyxl).
+
+### ➤ 2. Data Cleaning and Preprocessing
+Data cleaning is crucial to ensure the dataset is accurate, reliable, and analysis-ready.
+
+- **Check for null or missing values**: Identify and address any gaps or inconsistencies in the data.
+- **Rename columns**: Standardize column names for readability and consistency.
+- **Remove unnecessary data**:
+  - Drop rows where `FeatureName` includes "Scotland" as they represent national aggregates.
+  - Exclude generic entries such as "All" from both `Energy Type` and `Energy Consuming Sector`.
+  - Remove "Industrial & Commercial" as a combined category to avoid duplication, since the sectors also exist as stand-alone entries.
+
+### ➤ 3. Exploratory Data Analysis (EDA)
+Perform an initial examination of the dataset to understand:
+
+- The structure and types of energy consumed
+- Distribution across council areas
+- Sector-wise and time-based trends
+- Any notable anomalies or outliers
+
+### ➤ 4. Visual Analysis and Graphical Insights
+Create visualizations (bar charts, line graphs, heatmaps, etc.) to better understand and communicate trends, comparisons, and sectoral shifts in energy consumption.
+
+Visualization tools may include:
+
+- **Excel**
+
+### ➤ 5. Predictive Modeling with Linear Regression
+Use **linear regression** to forecast energy consumption trends over the next five years. This involves:
+
+- Selecting key variables (e.g., year, sector, fuel type)
+- Training and testing a regression model
+- Evaluating the model's performance
+- Making future predictions based on historical trends
+
+### ➤ 6. Dashboard Development
+Build an interactive **dashboard** to display:
+
+- Council-level and sector-level energy consumption
+- Trendlines, comparisons, and filters
+- Forecasting results
+
+### ➤ 7. Key Findings and Conclusion
+Summarize the major insights derived from the analysis, including:
+
+- Long-term consumption patterns
+- Regional and sectoral highlights
+- Forecasted energy use and potential areas for intervention
 
 
 
