@@ -1,7 +1,7 @@
 # Energy Consumption in Scottish Council Areas (2005–2020)
 
 <p align="right">
-  <img src="Student Course Registration System Report/Asset/Image/Datakirk logo.jpg" alt="Datakirk logo" width="150">
+  <img src="Asset/Image/Datakirk logo.jpg" alt="Datakirk logo" width="150">
 </p>
 <h1 align="center">SALAWUDEEN IBRAHIM</h1>
 
