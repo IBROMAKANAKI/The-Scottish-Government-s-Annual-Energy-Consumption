@@ -41,5 +41,36 @@ By achieving these goals, the project contributes to a better-informed energy st
 ## Aim 
 This project aims to uncover meaningful insights into Scotland’s energy usage, sectoral demand, and changes over time. The outcome will support policy recommendations, sustainability planning, and energy efficiency assessments.
 
+## Problem Statement
+
+As Scotland moves toward its ambitious climate goals such as achieving net-zero greenhouse gas emissions by 2045—understanding how, where, and why energy is consumed at the local level is critical. However, the challenge lies in:
+
+- **Fragmented data**: Energy consumption data is often large, technical, and difficult to interpret without specialized tools or analysis.
+- **Regional disparities**: Different council areas have unique energy usage patterns influenced by geography, infrastructure, population density, and industrial activity.
+- **Lack of actionable insights**: Raw data alone does not provide the clear insights needed by policymakers, planners, and stakeholders to implement effective energy efficiency strategies or decarbonization plans.
+
+Without a structured analysis of long-term energy consumption trends across Scotland's 32 council areas, it becomes difficult to:
+
+- Benchmark progress against national energy and climate targets.
+- Identify high-consumption areas or sectors requiring intervention.
+- Tailor local energy strategies based on real-world data.
+- Monitor the effectiveness of policies over time.
+
+## Data Sources
+
+The primary data source used in this project is:
+
+- **Scottish Government Energy Statistics Hub**  
+  [https://www.gov.scot/collections/energy-statistics/](https://www.gov.scot/collections/energy-statistics/)  
+  This dataset provides detailed local authority-level energy consumption data from 2005 to 2020. It includes breakdowns by fuel type and end-use sector.
+
+Additional supporting references may include:
+
+- UK Department for Energy Security and Net Zero (DESNZ)
+- Scottish Environmental Protection Agency (SEPA)
+- Local authority climate action reports
+- National Records of Scotland (for population and household context)
+
+
 
 
