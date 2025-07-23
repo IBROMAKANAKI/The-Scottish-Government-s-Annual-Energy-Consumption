@@ -80,7 +80,7 @@ Additional supporting references may include:
 
 The following structured methodology was adopted to carry out this energy consumption analysis project. Each step builds upon the previous one to ensure a clean, insightful, and actionable outcome.
 
-## 📊 Project Methodology Flow (Diagram as Table)
+### 📊 Project Methodology Flow
 
 | Step | Description |
 |------|-------------|
@@ -102,7 +102,7 @@ The following structured methodology was adopted to carry out this energy consum
 ### ➤ 1. Convert CSV to Excel Format
 The original dataset, provided in CSV format, is first converted to Excel format (`.xlsx`) for easier manipulation, documentation, and integration with visualization tools like Excel.
 
-## 📊 CSV to Excel Conversion Steps – Diagram View
+#### 📊 CSV to Excel Conversion Steps – Diagram View
 
                     ┌────────────────────────────┐
                     │      Paste Data            │
@@ -178,11 +178,14 @@ Data cleaning is crucial to ensure the dataset is accurate, reliable, and analys
 ```excel
 =IF(COUNTA(A2:I19009)<ROWS(A2:I19009)*COLUMNS(A2:I19009), "Has Blanks", "No Blanks")
 ```
-| Check Description       | Result         |
-|-------------------------|----------------|
+
+| Check Description       | Result          |
+|-------------------------|-----------------|
 | Null Values / Blanks    | No Blanks Found |
 
+
 - **Rename columns**: FeatureName As council, and delete Measurement and Units column.
+
 ![Rename and delete column](Asset/Image/cleaning.jpg)
   
 - **Remove unnecessary data**:
