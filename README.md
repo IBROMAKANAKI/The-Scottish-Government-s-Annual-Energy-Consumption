@@ -86,7 +86,7 @@ The following structured methodology was adopted to carry out this energy consum
 |------|-------------|
 | ✅ **Step 1** | **Convert CSV to Excel Format** <br>Prepare the dataset by converting from `.csv` to `.xlsx` for better handling and compatibility. |
 | ⬇️ | |
-| 🔧 **Step 2** | **Data Cleaning and Preprocessing** <br>- Check for null values <br>- Rename columns <br>- Remove rows with "Scotland", "All", and "Industrial & Commercial" (combined category) |
+| 🔧 **Step 2** | **Data Cleaning and Preprocessing** <br>- Check for null values <br>- Rename columns <br>- Remove rows with "Scotland", "All", and "Industrial & Commercial" (combined category) <br>- Create another column date assuming the data was collet first of each month  |
 | ⬇️ | |
 | 📊 **Step 3** | **Exploratory Data Analysis (EDA)** <br>Analyze trends, patterns, outliers, and the overall structure of the dataset. |
 | ⬇️ | |
@@ -100,17 +100,97 @@ The following structured methodology was adopted to carry out this energy consum
 
 
 ### ➤ 1. Convert CSV to Excel Format
-The original dataset, provided in CSV format, is first converted to Excel format (`.xlsx`) for easier manipulation, documentation, and integration with visualization tools like Excel, Power BI, or Python (via pandas and openpyxl).
+The original dataset, provided in CSV format, is first converted to Excel format (`.xlsx`) for easier manipulation, documentation, and integration with visualization tools like Excel.
+
+## 📊 CSV to Excel Conversion Steps – Diagram View
+
+                    ┌────────────────────────────┐
+                    │      Paste Data            │
+                    │  (into any Excel cell)     │
+                    └────────────┬───────────────┘
+                                 │
+                                 ▼
+                    ┌────────────────────────────┐
+                    │     Select the Data        │
+                    │  (highlight the full range)│
+                    └────────────┬───────────────┘
+                                 │
+                                 ▼
+                    ┌────────────────────────────┐
+                    │   Click "Text to Columns"  │
+                    │  (under the Data tab)      │
+                    └────────────┬───────────────┘
+                                 │
+                                 ▼
+                    ┌────────────────────────────┐
+                    │    Choose "Delimited"      │
+                    │ (in the Convert wizard)    │
+                    └────────────┬───────────────┘
+                                 │
+                                 ▼
+                    ┌────────────────────────────┐
+                    │   Select Delimiter: Comma  │
+                    │ (check only the comma box) │
+                    └────────────┬───────────────┘
+                                 │
+                                 ▼
+                    ┌────────────────────────────┐
+                    │           Done! ✅          │
+                    │  Data is split into columns│
+                    └────────────────────────────┘
+
+
+<div style="display: flex; flex-wrap: wrap; gap: 16px; justify-content: center;">
+
+  <div style="flex: 1 1 200px; max-width: 220px; text-align: center;">
+    <img src="Asset/Image/Raw data.jpg" alt="Raw CSV data" style="width: 100%; transition: transform 0.3s; cursor: zoom-in;" onmouseover="this.style.transform='scale(1.5)'" onmouseout="this.style.transform='scale(1)'">
+    <p>Raw CSV data</p>
+  </div>
+
+  <div style="flex: 1 1 200px; max-width: 220px; text-align: center;">
+    <img src="Asset/Image/Raw data 2.jpg" alt="Data Separating" style="width: 100%; transition: transform 0.3s; cursor: zoom-in;" onmouseover="this.style.transform='scale(1.5)'" onmouseout="this.style.transform='scale(1)'">
+    <p>Data Separating</p>
+  </div>
+
+  <div style="flex: 1 1 200px; max-width: 220px; text-align: center;">
+    <img src="Asset/Image/Raw data 3.jpg" alt="Selecting Delimited" style="width: 100%; transition: transform 0.3s; cursor: zoom-in;" onmouseover="this.style.transform='scale(1.5)'" onmouseout="this.style.transform='scale(1)'">
+    <p>Selecting Delimited</p>
+  </div>
+
+  <div style="flex: 1 1 200px; max-width: 220px; text-align: center;">
+    <img src="Asset/Image/Raw data 4.jpg" alt="Selecting General" style="width: 100%; transition: transform 0.3s; cursor: zoom-in;" onmouseover="this.style.transform='scale(1.5)'" onmouseout="this.style.transform='scale(1)'">
+    <p>Selecting General</p>
+  </div>
+
+  <div style="flex: 1 1 200px; max-width: 220px; text-align: center;">
+    <img src="Asset/Image/Raw data 5.jpg" alt="Final Data Preview" style="width: 100%; transition: transform 0.3s; cursor: zoom-in;" onmouseover="this.style.transform='scale(1.5)'" onmouseout="this.style.transform='scale(1)'">
+    <p>Final Data Preview</p>
+  </div>
+
+</div>
+
 
 ### ➤ 2. Data Cleaning and Preprocessing
 Data cleaning is crucial to ensure the dataset is accurate, reliable, and analysis-ready.
 
 - **Check for null or missing values**: Identify and address any gaps or inconsistencies in the data.
-- **Rename columns**: Standardize column names for readability and consistency.
+
+```excel
+=IF(COUNTA(A2:I19009)<ROWS(A2:I19009)*COLUMNS(A2:I19009), "Has Blanks", "No Blanks")
+```
+| Check Description       | Result         |
+|-------------------------|----------------|
+| Null Values / Blanks    | No Blanks Found |
+
+- **Rename columns**: FeatureName As council, and delete Measurement and Units column.
+![Rename and delete column](Asset/Image/cleaning.jpg)
+  
 - **Remove unnecessary data**:
   - Drop rows where `FeatureName` includes "Scotland" as they represent national aggregates.
   - Exclude generic entries such as "All" from both `Energy Type` and `Energy Consuming Sector`.
   - Remove "Industrial & Commercial" as a combined category to avoid duplication, since the sectors also exist as stand-alone entries.
+  - To facilitate time-series analysis and visualization, we need to convert the `Year` column into a proper `Date` format. Since the original dataset only includes the year (e.g., `2010`, `2011`), we will create a new column called `Date` by assuming that data was      collected on the **1st of January** of each year.
+
 
 ### ➤ 3. Exploratory Data Analysis (EDA)
 Perform an initial examination of the dataset to understand:
