@@ -80,40 +80,24 @@ Additional supporting references may include:
 
 The following structured methodology was adopted to carry out this energy consumption analysis project. Each step builds upon the previous one to ensure a clean, insightful, and actionable outcome.
 
-📂 Energy Data Analysis Project
-├── 📁 1. Convert CSV to Excel Format
-│
-├── 📁 2. Data Cleaning and Preprocessing
-│ ├── 🔍 Check for null or missing values
-│ ├── ✏️ Rename columns
-│ └── 🧹 Remove:
-│ ├── "Scotland" from FeatureName
-│ ├── "All" from Energy Type and Sector
-│ └── "Industrial & Commercial" combined category
-│
-├── 📁 3. Exploratory Data Analysis (EDA)
-│ ├── 📈 Understand sector and energy trends
-│ └── 🧐 Detect anomalies and data patterns
-│
-├── 📁 4. Visual Analysis and Graphical Insights
-│ ├── 📊 Line and bar charts
-│ ├── 🌡️ Heatmaps
-│ └── 🗺️ Geographic comparisons (council areas)
-│
-├── 📁 5. Predictive Modeling with Linear Regression
-│ ├── 🔢 Train regression model
-│ ├── 📉 Test and validate predictions
-│ └── 🔮 Forecast next 5 years of energy use
-│
-├── 📁 6. Dashboard Development
-│ ├── 💻 Create interactive views
-│ ├── 🎛️ Add filters by region, sector, and fuel type
-│ └── 📤 Share insights with stakeholders
-│
-└── 📁 7. Key Findings and Conclusion
-├── ✅ Summarize insights and trends
-├── 📌 Highlight areas for improvement
-└── 📍 Align with Scotland’s climate goals
+## 📊 Project Methodology Flow (Diagram as Table)
+
+| Step | Description |
+|------|-------------|
+| ✅ **Step 1** | **Convert CSV to Excel Format** <br>Prepare the dataset by converting from `.csv` to `.xlsx` for better handling and compatibility. |
+| ⬇️ | |
+| 🔧 **Step 2** | **Data Cleaning and Preprocessing** <br>- Check for null values <br>- Rename columns <br>- Remove rows with "Scotland", "All", and "Industrial & Commercial" (combined category) |
+| ⬇️ | |
+| 📊 **Step 3** | **Exploratory Data Analysis (EDA)** <br>Analyze trends, patterns, outliers, and the overall structure of the dataset. |
+| ⬇️ | |
+| 📈 **Step 4** | **Visual Analysis and Graphical Insights** <br>Create meaningful visuals such as line charts, bar graphs, heatmaps, and maps to identify trends and comparisons. |
+| ⬇️ | |
+| 🔮 **Step 5** | **Predictive Modeling with Linear Regression** <br>Use regression to forecast energy consumption over the next 5 years. |
+| ⬇️ | |
+| 📊 **Step 6** | **Dashboard Development** <br>Build an interactive dashboard for dynamic exploration of the dataset and findings. |
+| ⬇️ | |
+| 📝 **Step 7** | **Key Findings and Conclusion** <br>Summarize insights, highlight key patterns, and link conclusions to policy or sustainability goals. |
+
 
 ### ➤ 1. Convert CSV to Excel Format
 The original dataset, provided in CSV format, is first converted to Excel format (`.xlsx`) for easier manipulation, documentation, and integration with visualization tools like Excel, Power BI, or Python (via pandas and openpyxl).
