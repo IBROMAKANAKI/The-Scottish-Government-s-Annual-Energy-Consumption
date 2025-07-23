@@ -186,21 +186,37 @@ Data cleaning is crucial to ensure the dataset is accurate, reliable, and analys
 
 - **Rename columns**: FeatureName As council, and delete Measurement and Units column.
 
-![Rename and delete column](Asset/Image/cleaning.jpg)
+<p align="center">
+  <img src="Asset/Image/cleaning.jpg" alt="Rename and delete column" width="600"/>
+</p>
+
+<p align="center"><strong>Figure:</strong> Rename and delete unnecessary columns during data cleaning</p>
   
 - **Remove unnecessary data**:
   
   - Drop rows where `Council` includes "Scotland" as they represent national aggregates.
 
-![Filter out Scotland from Council](Asset/Image/Filter Scotland.png)
+<p align="center">
+  <img src="Asset/Image/Filter Scotland.png" alt="Filter out Scotland from Council" width="600"/>
+</p>
+
+<p align="center"><strong>Figure:</strong> Filter out rows where 'Council' is listed as 'Scotland'</p>
 
   - Exclude generic entries such as "All" from both `Energy Type` and `Energy Consuming Sector`.
 
-![All Energy Type](Asset/Image/All energy Type.png)
+<p align="center">
+  <img src="Asset/Image/All energy Type.png" alt="All Energy Type" width="600"/>
+</p>
+
+<p align="center"><strong>Figure:</strong> Filter out rows where <code>Energy Type</code> is "All"</p>
     
   - Remove "Industrial & Commercial" as a combined category to avoid duplication, since the sectors also exist as stand-alone entries.
 
-![all and industrial&commercial](Asset/Image/all and industrial&commercial .png)
+<p align="center">
+  <img src="Asset/Image/all and industrial&commercial .png" alt="All and Industrial & Commercial" width="600"/>
+</p>
+
+<p align="center"><strong>Figure:</strong> Remove rows where <code>Energy Consuming Sector</code> is "All" or "Industrial & Commercial" (to avoid duplication)</p>
     
   - To facilitate time-series analysis and visualization, we need to convert the `Year` column into a proper `Date` format. Since the original dataset only includes the year (e.g., `2010`, `2011`), we will create a new column called `Date` by assuming that data was      collected on the **1st of January** of each year.
 
