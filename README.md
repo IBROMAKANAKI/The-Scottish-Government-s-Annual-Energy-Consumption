@@ -1,4 +1,4 @@
-<img width="676" height="48" alt="image" src="https://github.com/user-attachments/assets/62483397-21ab-40b4-ac1c-2c6b05682e75" /># Energy Consumption in Scottish Council Areas (2005–2020)
+# Energy Consumption in Scottish Council Areas (2005–2020)
 
 <p align="right">
   <img src="Asset/Image/Datakirk logo.jpg" alt="Datakirk logo" width="150">
@@ -6,7 +6,7 @@
 <h1 align="center">SALAWUDEEN IBRAHIM</h1>
 
 <div align="center">
-  <video width="640" height="360" controls>
+  <video width="640" height="360" controls autoplay muted>
     <source src="Asset/Image/Screen-Recording-2025-07-24-2251.mp4" type="video/mp4">
     Your browser does not support the video tag.
   </video>
