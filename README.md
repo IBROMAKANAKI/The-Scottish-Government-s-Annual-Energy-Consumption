@@ -249,10 +249,37 @@ Data cleaning is crucial to ensure the dataset is accurate, reliable, and analys
 ### ➤ 3. Exploratory Data Analysis (EDA)
 Perform an initial examination of the dataset to understand:
 
-- The structure and types of energy consumed
-- Distribution across council areas
-- Sector-wise and time-based trends
-- Any notable anomalies or outliers
+- Descriptive Statistics by Energy Type
+
+| Energy Type            | Mean    | Median   | Mode     | Std Dev   | Variance     | Min   | Max       | Skewness  | Kurtosis   |
+|------------------------|---------|----------|----------|-----------|--------------|-------|-----------|-----------|------------|
+| Coal                   | 7.71    | 0.2025   | 0        | 49.66     | 2466.35      | 0     | 954.708   | 11.99     | 163.79     |
+| Electricity            | 325.16  | 234.64   | 235.515  | 300.97    | 90581.09     | 19.801| 2167.704  | 2.37      | 7.71       |
+| Gas                    | 536.27  | 367.491  | 0        | 601.02    | 361219.92    | 0     | 3781.715  | 2.35      | 6.58       |
+| Bioenergy & Wastes     | 36.13   | 7.6765   | 0        | 112.14    | 12575.32     | 0     | 1393.516  | 7.05      | 61.12      |
+| Petroleum Products     | 303.16  | 27.609   | 0        | 1138.58   | 1296363.95   | 0     | 20254.967 | 10.19     | 129.79     |
+| Manufactured Fuels     | 14.34   | 2.5875   | 0        | 75.50     | 5700.43      | 0     | 741.017   | 7.94      | 63.03      |
+
+- Descriptive Statistics by Energy Consuming Sector
+
+| Energy Consuming Sector | Mean    | Median   | Mode   | Std Dev   | Variance     | Min   | Max       | Skewness  | Kurtosis   |
+|-------------------------|---------|----------|--------|-----------|--------------|-------|-----------|-----------|------------|
+| Rail                    | 9.48    | 0.07     | 0      | 17.67     | 312.40       | 0     | 86.996    | 2.36      | 5.37       |
+| Domestic                | 236.38  | 15.625   | 0      | 479.61    | 230025.0     | 0     | 3781.715  | 3.60      | 15.86      |
+| Public Sector           | 4.03    | 0.831    | 0      | 9.73      | 94.75        | 0     | 81.734    | 4.45      | 22.08      |
+| Agriculture             | 43.59   | 0.9655   | 0      | 89.87     | 8077.05      | 0     | 519.838   | 3.06      | 9.93       |
+| Road Transport          | 595.77  | 110.588  | 4.345  | 815.64    | 665274.58    | 0.168 | 3265.728  | 1.50      | 1.24       |
+| Commercial              | 108.47  | 3.6185   | 0      | 206.38    | 42593.26     | 0     | 1834.391  | 3.29      | 14.65      |
+| Industrial              | 250.82  | 45.326   | 0      | 1133.19   | 1284112.08   | 0     | 20254.967 | 11.89     | 156.50     |
+
+
+The analysis of energy consumption across sectors and energy types reveals significant variations in usage patterns. Road Transport, Industrial, and Domestic sectors are the largest consumers, with Road Transport averaging 595.77 GWh due to heavy fuel usage, and Industrial consumption reaching 250.82 GWh with extreme peaks from heavy industries. Domestic consumption, with a mean of 236.38 GWh, is also substantial but unevenly distributed, as indicated by its high skewness and kurtosis.
+
+Sectors such as Rail, Public, and Agriculture show relatively low average consumption, though they have occasional spikes in specific locations. Commercial energy use, with a mean of 108.47 GWh, is dominated by a few high-consumption businesses such as malls and data centers.
+
+Looking at energy types, Gas (536.27 GWh) and Electricity (325.16 GWh) are the most consumed, reflecting their role in both domestic and industrial applications. Petroleum products (303.16 GWh) and coal (7.71 GWh) also show concentrated but significant usage, with petroleum displaying extreme outliers.
+
+To optimize energy use, efficiency measures should target high-demand sectors like industry and transport. Electrification, renewable energy adoption, and demand-side management in domestic and commercial sectors could significantly reduce peak loads and improve sustainability.
 
 ### ➤ 4. Visual Analysis and Graphical Insights
 Create visualizations (bar charts, line graphs, heatmaps, etc.) to better understand and communicate trends, comparisons, and sectoral shifts in energy consumption.
