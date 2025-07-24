@@ -503,7 +503,7 @@ This rising trend signifies Bioenergy’s growing role in decarbonizing Scotland
 
 - **Coal Energy Consumption in Scotland (2005–2020)**
 
-!Coal Energy Consumption in Scotland (2005–2020)[](Asset/Image/coal consumption.png)
+![Coal Energy Consumption in Scotland (2005–2020)](Asset/Image/coal consumption.png)
 
 Between 2005 and 2020, coal consumption in Scotland experienced a sharp and consistent decline, reflecting the nation’s transition toward cleaner and more sustainable energy sources. Over this 16-year period, total coal consumption amounted to approximately 23,675 GWh.
 
